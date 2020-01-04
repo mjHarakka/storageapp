@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="fragments/layout :: head">
+        <meta charset="UTF-8" />
+        <title>File manager</title>
+    </head>
+    <body>
+<header th:replace="fragments/layout :: header"></header>
+   
+		
+		<table class="ui celled striped table">
+            <thead>
+            <tr><th colspan="4">
+ 			    File Manager
+ 	 		</th>
+                <tr>
+                    <th>Filename</th><th>Size</th><th>Content-Type</th><th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:if="${files.empty}">
+                    <td colspan="4">No files</td>
+                </tr>
+                <tr th:each="file : ${files}">
+                    <td class="collapsing"> <i class="file outline icon"></i><a th:href="@{dashboard/{id}(id=${file.id})}" th:text="${file.name}">file name</a></td>
+                    <td th:text="${file.contentLength}">Content length</td>
+                    <td th:text="${file.contentType}">Content type</td>
+                    <td><form th:action="@{dashboard/files/{id}(id=${file.id})}" th:method="delete">
+                    <input class="negative ui button" type="submit" value="Delete"/></form></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <form method="POST" action="/dashboard" enctype="multipart/form-data">
+            <input class="ui basic button" type="file" name="file" id="file"/>
+            <input class="positive ui button"type="submit" value="Add!"/>
+        </form>
+    </body>
+</html>

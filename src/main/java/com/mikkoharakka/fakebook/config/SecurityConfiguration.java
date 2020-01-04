@@ -1,5 +1,7 @@
 package com.mikkoharakka.fakebook.config;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,23 +24,19 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable();
         http.headers().frameOptions().sameOrigin();
        
         http.authorizeRequests()
-        		.antMatchers("/h2-console", "/h2-console/**").permitAll()
+        		.antMatchers("/", "/h2-console", "/h2-console/**").permitAll()
                 .antMatchers("/register").permitAll()
                 .antMatchers("/login").permitAll()
+                .antMatchers("/files").permitAll()
                 .anyRequest().authenticated().and()
                 .formLogin()
-                ;
-        		/*
-                .defaultSuccessUrl("/home", true)
-                .permitAll().and()
-                .logout()
-                .permitAll();
-                */
-                
+                	.loginPage("/login")
+        			.permitAll().and()
+        	        .logout()
+        	        .permitAll();
     }
 	
 	@Autowired

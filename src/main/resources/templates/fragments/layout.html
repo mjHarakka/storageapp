@@ -5,12 +5,37 @@
 		<title>Fakebook</title>
 		<meta name="description" content="The fakebook">
 		<meta name="author" content="Mikko Harakka">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cosmo/bootstrap.min.css"/>
+		<!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cosmo/bootstrap.min.css"/>-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+		
+
+
+    
+    
     </head>
     <body>
+    
     <header th:fragment="header">
-       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-		  <a class="navbar-brand" href="#">fakebook</a>
+    
+    <div class="ui top inverted menu" style="border-radius: 0px;">
+	  <div class="header item">
+	    fakeBox
+	  </div>
+	  <a class="item" href="/fa">
+	    Home
+	  </a>
+	   <a class="item" href="/profile">
+	    Profile
+	  </a>
+	   <form th:action="@{/logout}" method="POST">
+                    <button class="negative ui button" type="submit">Logout</button>
+        </form>
+	</div>
+    
+    
+		<!-- 
+       <nav class="ui menu">
+		  <a class="navbar-brand" href="#">fakeBox</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
@@ -24,21 +49,22 @@
 		        <a class="nav-link" href="/profile">Profile</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="/logout">Log out</a>
+		        <form th:action="@{/logout}" method="POST">
+                    <button class="negative ui button" type="submit">Logout</button>
+                </form>
 		      </li>
 		    </ul>
-		    <form class="form-inline my-2 my-lg-0">
-		      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-		      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-		    </form>
+		    
 		  </div>
-		</nav>	           
+		</nav>	   
+		 -->        
       </header>
+     
 		
 		<footer th:fragment="footer">
       
       <div class="footer-copyright text-center py-3">© 2019 Copyright:
-        <a href="/"> Social Media</a>
+        <a href="/"> Cloud Storage</a>
       </div>
 		
 		</footer>

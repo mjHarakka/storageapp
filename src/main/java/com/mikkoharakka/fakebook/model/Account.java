@@ -35,10 +35,8 @@ public class Account extends AbstractPersistable<Long> {
 	private String lastName;
 
 	@OneToMany(mappedBy="account")
-	private List<Post> posts;     
+	private List<FileObject> files;     
 	
-	@OneToMany(mappedBy="account")
-	private List<Comment> comments;
 	
 
 	

@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.mikkoharakka.fakebook.model.Comment;
-import com.mikkoharakka.fakebook.model.Post;
 import com.mikkoharakka.fakebook.model.Account;
 import com.mikkoharakka.fakebook.repository.AccountRepository;
 
@@ -22,7 +20,7 @@ import com.mikkoharakka.fakebook.repository.AccountRepository;
 public class RegisterController {
 
 	@Autowired
-	AccountRepository accountRepository;
+	private AccountRepository accountRepository;
 	
 	@Autowired
 	private PasswordEncoder passwordEncoder;
@@ -45,7 +43,7 @@ public class RegisterController {
         String lastName = u.getLastName();
         String password = u.getPassword();
         
-        Account a = new Account(email, passwordEncoder.encode(password), firstName, lastName, null, null);
+        Account a = new Account(email, passwordEncoder.encode(password), firstName, lastName, null);
         accountRepository.save(a);
         return "redirect:/";
     }
