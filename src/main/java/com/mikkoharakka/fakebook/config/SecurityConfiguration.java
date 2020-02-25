@@ -25,13 +25,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
         http.headers().frameOptions().sameOrigin();
+        
        
         http.authorizeRequests()
         		.antMatchers("/", "/h2-console", "/h2-console/**").permitAll()
                 .antMatchers("/register").permitAll()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/files").permitAll()
-                .anyRequest().authenticated().and()
+                .anyRequest().authenticated().and().httpBasic().and().csrf().disable()
                 .formLogin()
                 	.loginPage("/login")
         			.permitAll().and()

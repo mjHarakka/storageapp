@@ -24,7 +24,7 @@ public class DefaultController {
             return "redirect:/dashboard";
         }
 		
-		return "landing";
+		return "redirect:/dashboard";
 	}
 	
 	
