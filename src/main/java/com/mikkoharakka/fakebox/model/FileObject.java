@@ -1,4 +1,4 @@
-package com.mikkoharakka.fakebook.model;
+package com.mikkoharakka.fakebox.model;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;

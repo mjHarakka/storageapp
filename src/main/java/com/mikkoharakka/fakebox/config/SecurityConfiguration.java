@@ -1,4 +1,4 @@
-package com.mikkoharakka.fakebook.config;
+package com.mikkoharakka.fakebox.config;
 
 import javax.servlet.http.HttpSession;
 

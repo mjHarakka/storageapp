@@ -1,4 +1,4 @@
-package com.mikkoharakka.fakebook.model;
+package com.mikkoharakka.fakebox.model;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.mikkoharakka.fakebook.Service;
+package com.mikkoharakka.fakebox.Service;
 
 import java.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +8,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.mikkoharakka.fakebook.model.Account;
-import com.mikkoharakka.fakebook.repository.AccountRepository;
+import com.mikkoharakka.fakebox.model.Account;
+import com.mikkoharakka.fakebox.repository.AccountRepository;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

@@ -1,4 +1,4 @@
-package com.mikkoharakka.fakebook.controller;
+package com.mikkoharakka.fakebox.controller;
 
 import java.io.IOException;
 
@@ -19,11 +19,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.mikkoharakka.fakebook.Service.AccountService;
-import com.mikkoharakka.fakebook.Service.FileService;
-import com.mikkoharakka.fakebook.model.Account;
-import com.mikkoharakka.fakebook.model.FileObject;
-import com.mikkoharakka.fakebook.repository.FileObjectRepository;
+import com.mikkoharakka.fakebox.Service.AccountService;
+import com.mikkoharakka.fakebox.Service.FileService;
+import com.mikkoharakka.fakebox.model.Account;
+import com.mikkoharakka.fakebox.model.FileObject;
+import com.mikkoharakka.fakebox.repository.FileObjectRepository;
 
 @Controller
 public class FileController {

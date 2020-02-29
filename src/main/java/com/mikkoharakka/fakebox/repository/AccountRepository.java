@@ -1,9 +1,9 @@
-package com.mikkoharakka.fakebook.repository;
+package com.mikkoharakka.fakebox.repository;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.mikkoharakka.fakebook.model.Account;
+import com.mikkoharakka.fakebox.model.Account;
 
 public interface AccountRepository extends JpaRepository<Account, Long> {
 

@@ -1,4 +1,4 @@
-package com.mikkoharakka.fakebook.controller;
+package com.mikkoharakka.fakebox.controller;
 
 import javax.servlet.http.HttpSession;
 
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.mikkoharakka.fakebook.model.Account;
+import com.mikkoharakka.fakebox.model.Account;
 
 @Controller
 public class DefaultController {

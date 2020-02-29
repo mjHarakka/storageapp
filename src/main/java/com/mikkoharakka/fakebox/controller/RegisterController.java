@@ -1,4 +1,4 @@
-package com.mikkoharakka.fakebook.controller;
+package com.mikkoharakka.fakebox.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.mikkoharakka.fakebook.model.Account;
-import com.mikkoharakka.fakebook.repository.AccountRepository;
+import com.mikkoharakka.fakebox.model.Account;
+import com.mikkoharakka.fakebox.repository.AccountRepository;
 
 @Controller
 public class RegisterController {

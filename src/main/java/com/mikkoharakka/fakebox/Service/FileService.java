@@ -1,13 +1,13 @@
-package com.mikkoharakka.fakebook.Service;
+package com.mikkoharakka.fakebox.Service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mikkoharakka.fakebook.model.Account;
-import com.mikkoharakka.fakebook.model.FileObject;
-import com.mikkoharakka.fakebook.repository.FileObjectRepository;
+import com.mikkoharakka.fakebox.model.Account;
+import com.mikkoharakka.fakebox.model.FileObject;
+import com.mikkoharakka.fakebox.repository.FileObjectRepository;
 
 @Service
 public class FileService {

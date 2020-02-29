@@ -1,4 +1,4 @@
-package com.mikkoharakka.fakebook.controller;
+package com.mikkoharakka.fakebox.controller;
 
 
 import javax.servlet.http.HttpSession;
